@@ -33,8 +33,9 @@ a{color:inherit}
 @media (max-width:600px){.grid{grid-template-columns:1fr}}
 .c{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow);position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s;text-decoration:none;color:inherit;display:flex;flex-direction:column}
 a.c:hover,.c.hov:hover{transform:translateY(-3px);box-shadow:0 22px 40px -22px rgba(23,23,28,.45)}
-.w2{grid-column:span 2}.w4{grid-column:1/-1}.h2{grid-row:span 2}
-@media (max-width:600px){.w2,.h2{grid-column:auto;grid-row:auto}}
+.w2{grid-column:span 2}.w3{grid-column:span 3}.w4{grid-column:1/-1}.h2{grid-row:span 2}
+@media (max-width:980px){.w3{grid-column:1/-1}}
+@media (max-width:600px){.w2,.w3,.h2{grid-column:auto;grid-row:auto}}
 .lab{font:500 11.5px "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
 h2.sec{font-size:24px;letter-spacing:-.02em;margin:0 0 6px}
 /* hero */
@@ -119,9 +120,12 @@ a.c:hover .go{transform:rotate(-45deg)}
 .tl li{display:grid;grid-template-columns:72px 1fr;gap:10px}
 .tl .y{font:500 12px "JetBrains Mono",monospace;color:var(--muted);padding-top:3px}
 .tl b{display:block}.tl span{color:var(--muted);font-size:14px}
-.tags2{display:flex;flex-wrap:wrap;gap:7px}
-.tags2 span{font-size:13px;font-weight:600;padding:6px 11px;border-radius:999px;background:var(--soft);border:1px solid var(--line);transition:opacity .2s}
-.tags2 span.ml{color:var(--c1)}.tags2 span.fe{color:var(--c2)}.tags2 span.in{color:var(--c3)}
+.sg{padding:11px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:150px 1fr;gap:6px 14px}
+.sg:first-of-type{border-top:0;padding-top:0}
+.sg b{font-size:14px;color:var(--c);line-height:1.35}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chips span{font-size:12.5px;font-weight:600;padding:4px 9px;border-radius:999px;background:var(--soft);border:1px solid var(--line)}
+@media (max-width:640px){.sg{grid-template-columns:1fr}}
 .lang{display:grid;gap:9px;margin-top:4px}
 .lang div{display:grid;grid-template-columns:76px 1fr 46px;gap:10px;align-items:center;font-size:14px}
 .lang i{height:8px;border-radius:999px;background:var(--line);position:relative;overflow:hidden}
@@ -133,7 +137,7 @@ a.c:hover .go{transform:rotate(-45deg)}
 .cta .row{margin:0 0 0 auto;padding:0}
 .cta .pill{background:#fff;color:#17171c;border:0}
 .cta .pill.ghost{background:rgba(255,255,255,.18);color:#fff}
-footer{text-align:center;color:var(--muted);font-size:13px;margin-top:26px}
+footer{text-align:center;color:var(--muted);font-size:13px;margin-top:34px}
 .rv{opacity:0;transform:translateY(14px) scale(.985)}
 .rv.in{opacity:1;transform:none;transition:opacity .6s ease,transform .6s ease}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
@@ -149,13 +153,14 @@ footer{text-align:center;color:var(--muted);font-size:13px;margin-top:26px}
 
   <main class="grid">
     <!-- hero row -->
-    <section class="c intro w2 rv">
+    <section class="c intro w3 rv">
       <div class="lab">AI Engineer · Munich</div>
       <h1>Hi, I'm Pooja. I build <span class="hl">transformer pipelines</span> and the apps around them.</h1>
       <p>AI engineer with an M.Sc. in Computer Science and three years of shipping production software. I work across the whole loop: data, models, evaluation, deployment, and a UI people actually use.</p>
       <div class="row">
         <a class="pill dark" href="https://www.linkedin.com/in/poojaprasadrn" target="_blank" rel="noopener">LinkedIn ↗</a>
         <a class="pill" href="https://github.com/poojaprasadrn" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="pill" href="Pooja_Prasad_CV.pdf" target="_blank" rel="noopener">Résumé ↗</a>
         <a class="pill" href="#projects">Projects ↓</a>
       </div>
     </section>
@@ -165,17 +170,6 @@ footer{text-align:center;color:var(--muted);font-size:13px;margin-top:26px}
       <b>Pooja Prasad</b>
       <div class="sub">Munich, Germany<br>M.Sc. CS · Bauhaus-Universität Weimar</div>
       <span class="status"><i></i>Open to work</span>
-    </section>
-
-    <section class="c cv rv">
-      <div class="lab">Résumé</div>
-      <h3>My CV, in one click</h3>
-      <p>Two pages covering AI engineering, full-stack work, my thesis and RAG.</p>
-      <div class="doc"><span class="ic">PDF</span><div><b>Pooja_Prasad_CV.pdf</b><small>2 pages · updated Oct 2026</small></div></div>
-      <div class="row">
-        <a class="pill" href="Pooja_Prasad_CV.pdf" target="_blank" rel="noopener">View ↗</a>
-        <a class="pill ghost" href="Pooja_Prasad_CV.pdf" download>Download ↓</a>
-      </div>
     </section>
 
     <!-- summary + thesis -->
@@ -190,7 +184,7 @@ footer{text-align:center;color:var(--muted);font-size:13px;margin-top:26px}
         <li>an AI-text detector with <b style="color:var(--fg)">99.5% accuracy</b>, applied to 8M+ pages</li>
         <li>batch inference on an HPC cluster with <b style="color:var(--fg)">Docker and SLURM</b></li>
       </ul>
-      <p>Before that, I built REST APIs, backend services and frontends in <b>React, Angular and Node.js</b>, worked directly with clients, and mentored juniors in Agile teams. I work comfortably in English (C2) and German (B1).</p>
+      <p>Before that, I built REST APIs, backend services and frontends in <b>React, Angular and Node.js</b>, worked directly with clients, and mentored juniors in Agile teams.</p>
       <div class="hl3">
         <div><b>🧠 End-to-end ML</b><span>Data, annotation, model, evaluation, deployment</span></div>
         <div><b>💻 Full-stack delivery</b><span>React, Angular, Node.js, Spring Boot</span></div>
@@ -285,24 +279,21 @@ footer{text-align:center;color:var(--muted);font-size:13px;margin-top:26px}
       </ul>
     </section>
 
-    <section class="c w2 rv">
-      <div class="lab">Stack</div>
-      <div class="filt" id="sfilt" style="margin-bottom:12px"><button data-f="all" class="on">All</button><button data-f="ml">ML &amp; data</button><button data-f="fe">Web</button><button data-f="in">Infra</button></div>
-      <div class="tags2" id="tags">
-        <span class="ml">Python</span><span class="ml">PyTorch</span><span class="ml">Hugging Face</span><span class="ml">Transformers</span><span class="ml">scikit-learn</span><span class="ml">LLMs</span><span class="ml">RAG</span><span class="ml">LangGraph</span><span class="ml">Pandas</span><span class="ml">NumPy</span>
-        <span class="fe">TypeScript</span><span class="fe">React</span><span class="fe">Next.js</span><span class="fe">Angular</span><span class="fe">RxJS</span><span class="fe">Redux</span><span class="fe">Node.js</span><span class="fe">Express</span><span class="fe">Spring Boot</span><span class="fe">Java</span>
-        <span class="in">Docker</span><span class="in">SLURM</span><span class="in">GCP</span><span class="in">Git</span><span class="in">Jenkins CI/CD</span><span class="in">Jest</span><span class="in">MySQL</span><span class="in">MongoDB</span>
-      </div>
+    <section class="c w2 h2 rv" id="skills">
+      <div class="lab">Technical skills</div>
+        <div class="sg" style="--c:var(--c1)"><b>Machine Learning and NLP</b><div class="chips"><span>PyTorch</span><span>Hugging Face Transformers</span><span>scikit-learn</span><span>supervised learning</span><span>feature engineering</span><span>model evaluation</span><span>prompt engineering</span><span>Large Language Models (LLMs)</span><span>Generative AI</span><span>RAG</span><span>LangGraph</span><span>Agentic AI</span><span>TensorFlow</span><span>PySpark</span></div></div>
+        <div class="sg" style="--c:var(--c4)"><b>Data and Evaluation</b><div class="chips"><span>Pandas</span><span>NumPy</span><span>Tableau</span><span>Matplotlib</span><span>Seaborn</span><span>statistical analysis (Pearson correlation)</span><span>temporal trend analysis</span><span>annotation design</span><span>embeddings</span><span>text classification</span><span>web data extraction (Resiliparse)</span></div></div>
+        <div class="sg" style="--c:var(--c3)"><b>MLOps and Cloud</b><div class="chips"><span>Docker</span><span>Kubernetes</span><span>Google Cloud Platform</span><span>SLURM (HPC)</span><span>distributed batch inference</span><span>CI/CD pipeline</span><span>Jenkins</span><span>Git version control</span><span>JIRA</span></div></div>
+        <div class="sg" style="--c:var(--c6)"><b>Programming Languages</b><div class="chips"><span>Python</span><span>Java</span><span>TypeScript</span><span>JavaScript</span><span>SQL</span><span>HTML</span><span>CSS</span><span>PHP</span><span>C/C++</span></div></div>
+        <div class="sg" style="--c:var(--c2)"><b>Backend and APIs</b><div class="chips"><span>Spring Boot</span><span>microservices</span><span>System Architecture</span><span>Node.js</span><span>Express</span><span>REST APIs</span><span>Web security (JWT, OAuth, RBAC, OWASP)</span><span>System Design</span></div></div>
+        <div class="sg" style="--c:var(--c5)"><b>Frontend</b><div class="chips"><span>React</span><span>Next.js</span><span>Angular</span><span>Redux</span><span>RxJS</span><span>jQuery</span><span>Tailwind CSS</span><span>SASS</span><span>Bootstrap</span></div></div>
+        <div class="sg" style="--c:var(--c6)"><b>Databases</b><div class="chips"><span>MySQL</span><span>MongoDB</span></div></div>
+        <div class="sg" style="--c:var(--c3)"><b>Testing</b><div class="chips"><span>Jest</span><span>Enzyme</span><span>Jasmine</span><span>Karma</span></div></div>
     </section>
 
-    <section class="c w2 rv">
+    <section class="c w4 rv">
       <div class="lab">Languages</div>
-      <div class="lang">
-        <div>English<i style="--w:100%"></i><small>C2</small></div>
-        <div>German<i style="--w:50%"></i><small>B1</small></div>
-        <div>Kannada<i style="--w:100%"></i><small>native</small></div>
-        <div>Hindi<i style="--w:80%"></i><small>prof.</small></div>
-      </div>
+      <p style="margin:0;font-size:17px;font-weight:600">English (C2) · German (B1)</p>
     </section>
 
     <section class="c cta w4 rv">
@@ -313,7 +304,7 @@ footer{text-align:center;color:var(--muted);font-size:13px;margin-top:26px}
       </div>
     </section>
   </main>
-  <footer>© 2026 Pooja Prasad · Built by hand, no frameworks</footer>
+  <footer>© 2026 Pooja Prasad</footer>
 </div>
 <script>
 (function(){
@@ -323,7 +314,6 @@ document.getElementById('theme').addEventListener('click',function(){root.datase
 var steps=document.querySelectorAll('#flow span'),i=0;setInterval(function(){steps.forEach(function(s,j){s.classList.toggle('on',j===i)});i=(i+1)%steps.length},900);
 function filter(bar,items,test){bar.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;bar.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b)});items.forEach(function(t){test(t,b.dataset.f)})})}
 filter(document.getElementById('pfilt'),document.querySelectorAll('#plist .pj'),function(t,f){t.classList.toggle('hide',f!=='all'&&t.dataset.k.split(' ').indexOf(f)<0)});
-filter(document.getElementById('sfilt'),document.querySelectorAll('#tags span'),function(t,f){t.style.opacity=(f==='all'||t.classList.contains(f))?1:.2});
 var io=new IntersectionObserver(function(es){es.forEach(function(e,k){if(e.isIntersecting){setTimeout(function(){e.target.classList.add('in')},k*60);io.unobserve(e.target)}})},{threshold:.08});
 document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});
 })();
