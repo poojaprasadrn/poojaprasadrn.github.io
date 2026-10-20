@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pooja Prasad · AI Engineer in Munich</title>
+<meta name="description" content="Pooja Prasad: AI engineer in Munich working on transformers, NLP and RAG, with a full-stack background. M.Sc. Computer Science, Bauhaus-Universität Weimar. Open to work.">
+<meta property="og:title" content="Pooja Prasad · AI Engineer in Munich">
+<meta property="og:description" content="Transformers, NLP and RAG, plus the full-stack apps around them. Open to ML and AI engineering roles.">
+<meta property="og:image" content="https://poojaprasadrn.github.io/assets/photo.webp">
+<link rel="icon" href="assets/photo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f1ec;--card:#ffffff;--fg:#17171c;--muted:#5d5d6b;--line:#e6e1d8;--soft:#f8f6f2;
+--c1:#0F4D92;--c2:#e8603c;--c3:#2f7a3b;--c4:#9A4D8E;--c5:#f2b134;--c6:#42949E;--shadow:0 1px 0 rgba(0,0,0,.03),0 14px 34px -22px rgba(23,23,28,.35)}
+[data-theme=dark]{--bg:#0f1014;--card:#191a21;--fg:#f1f0ec;--muted:#a5a6b4;--line:#2a2b35;--soft:#20212a;--c1:#6ea8ff;--c3:#7fd18b;--c4:#d39ad0;--c6:#6cc6cf;--shadow:0 14px 34px -22px rgba(0,0,0,.8)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:20px}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 "Plus Jakarta Sans",system-ui,sans-serif;transition:background .3s,color .3s}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:24px 20px 50px}
+.top{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.logo{font-weight:800;font-size:18px;letter-spacing:-.02em;text-decoration:none}
+.logo span{color:var(--c2)}
+.nav{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{text-decoration:none;color:var(--muted);font-weight:600;font-size:14px;padding:8px 11px;border-radius:10px;white-space:nowrap}
+.nav a:hover{color:var(--fg);background:var(--card)}
+.tbtn{flex:0 0 auto;width:40px;height:40px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--fg);cursor:pointer;font-size:18px}
+@media (max-width:640px){.nav{display:none}.tbtn{margin-left:auto}}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;grid-auto-flow:dense}
+@media (max-width:980px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.grid{grid-template-columns:1fr}}
+.c{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow);position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s;text-decoration:none;color:inherit;display:flex;flex-direction:column}
+a.c:hover,.c.hov:hover{transform:translateY(-3px);box-shadow:0 22px 40px -22px rgba(23,23,28,.45)}
+.w2{grid-column:span 2}.w4{grid-column:1/-1}.h2{grid-row:span 2}
+@media (max-width:600px){.w2,.h2{grid-column:auto;grid-row:auto}}
+.lab{font:500 11.5px "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+h2.sec{font-size:24px;letter-spacing:-.02em;margin:0 0 6px}
+/* hero */
+.intro h1{font-size:clamp(32px,4.2vw,52px);line-height:1.03;margin:6px 0 14px;letter-spacing:-.03em;font-weight:800}
+.intro h1 .hl{background:linear-gradient(90deg,var(--c2),var(--c5));-webkit-background-clip:text;background-clip:text;color:transparent}
+.intro p{color:var(--muted);font-size:17px;margin:0;max-width:560px}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:18px}
+.pill{display:inline-flex;align-items:center;gap:7px;font-weight:600;font-size:14px;padding:9px 15px;border-radius:999px;border:1px solid var(--line);text-decoration:none;background:var(--soft);transition:.2s}
+.pill:hover{border-color:var(--fg)}
+.pill.dark{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+/* profile card */
+.me{align-items:center;text-align:center;justify-content:center;gap:4px}
+.me .ph{width:150px;height:150px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 5px var(--card),0 0 0 6px var(--line),0 14px 30px -14px rgba(0,0,0,.45);margin-bottom:12px}
+.me b{font-size:18px}
+.me .sub{color:var(--muted);font-size:13.5px;line-height:1.45}
+.status{display:inline-flex;align-items:center;gap:7px;margin-top:12px;font-weight:700;font-size:13px;color:var(--c3);background:color-mix(in srgb,var(--c3) 12%,transparent);padding:6px 12px;border-radius:999px}
+.status i{width:8px;height:8px;border-radius:50%;background:#2fb24c;animation:p 1.8s infinite}
+@keyframes p{0%,100%{box-shadow:0 0 0 0 rgba(47,178,76,.45)}60%{box-shadow:0 0 0 7px rgba(47,178,76,0)}}
+/* resume card */
+.cv{background:linear-gradient(150deg,#e8603c,#f2b134);color:#fff;border:0}
+.cv .lab{color:rgba(255,255,255,.85)}
+.cv h3{font-size:24px;line-height:1.1;margin:4px 0 8px;letter-spacing:-.02em}
+.cv p{margin:0;opacity:.92;font-size:14.5px}
+.doc{margin:14px 0 4px;background:rgba(255,255,255,.18);border-radius:14px;padding:12px;display:flex;gap:12px;align-items:center}
+.doc .ic{width:38px;height:46px;border-radius:6px;background:#fff;color:#e8603c;display:grid;place-items:center;font:800 11px "JetBrains Mono",monospace;flex:0 0 auto;position:relative}
+.doc .ic:after{content:"";position:absolute;top:0;right:0;border-style:solid;border-width:0 10px 10px 0;border-color:transparent #f6c9a8 transparent transparent}
+.doc small{display:block;opacity:.9;font-size:12.5px}
+.cv .row{padding-top:12px}
+.cv .pill{background:#fff;color:#17171c;border:0}
+.cv .pill.ghost{background:rgba(255,255,255,.18);color:#fff}
+/* summary */
+.summary p{margin:0 0 12px;color:var(--muted);font-size:16px}
+.summary p b{color:var(--fg)}
+.hl3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:auto}
+@media (max-width:760px){.hl3{grid-template-columns:1fr}}
+.hl3 div{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:12px}
+.hl3 b{display:block;font-size:14px}
+.hl3 span{font-size:13px;color:var(--muted)}
+/* thesis + rag */
+.thesis{background:linear-gradient(140deg,#0F4D92,#3775BA 60%,#42949E);color:#fff;border:0}
+.thesis .lab{color:rgba(255,255,255,.75)}
+.thesis h3{font-size:25px;line-height:1.15;margin:4px 0 10px;letter-spacing:-.02em}
+.thesis p{margin:0;color:rgba(255,255,255,.9)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:auto;padding-top:18px}
+.stats div{background:rgba(255,255,255,.12);border-radius:14px;padding:10px 12px}
+.stats b{display:block;font-size:22px;font-weight:800;letter-spacing:-.02em}
+.stats span{font-size:12px;opacity:.85}
+.go{position:absolute;top:18px;right:18px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.18);transition:.25s}
+a.c:hover .go{transform:rotate(-45deg)}
+.rag{background:#17171c;color:#f1f0ec;border:0}
+[data-theme=dark] .rag{background:#242530}
+.rag .lab{color:#a5a6b4}
+.rag h3{font-size:21px;margin:4px 0 8px}
+.rag p{color:#c8c8d2;margin:0 0 12px;font-size:14.5px}
+.flow{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto}
+.flow span{font:500 12px "JetBrains Mono",monospace;padding:5px 9px;border-radius:8px;background:#2b2c38;color:#cfd2ff;transition:background .3s}
+.flow span.on{background:#7fd18b;color:#0b1a0e}
+.big{font-size:42px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.metric .big{color:var(--c2)}.metric.b .big{color:var(--c4)}
+.metric p{margin:6px 0 0;color:var(--muted);font-size:14px}
+/* projects */
+.ptop{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.filt{display:flex;gap:6px;flex-wrap:wrap}
+.filt button{font:600 13px "Plus Jakarta Sans",sans-serif;border:1px solid var(--line);background:none;color:var(--muted);padding:6px 12px;border-radius:999px;cursor:pointer}
+.filt button.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.plist{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:980px){.plist{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.plist{grid-template-columns:1fr}}
+.pj{border:1px solid var(--line);border-radius:18px;padding:16px;background:var(--soft);display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit;transition:.2s;position:relative}
+.pj:hover{border-color:var(--c);transform:translateY(-2px)}
+.pj .t{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.pj h4{margin:0;font-size:16px;line-height:1.3}
+.pj .yr{font:500 11.5px "JetBrains Mono",monospace;color:var(--muted);white-space:nowrap}
+.pj p{margin:0;font-size:14px;color:var(--muted)}
+.pj .tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto;padding-top:6px}
+.pj .tags span{font:600 11.5px "Plus Jakarta Sans";padding:3px 8px;border-radius:999px;background:var(--card);border:1px solid var(--line)}
+.pj:before{content:"";position:absolute;left:16px;top:0;width:28px;height:3px;border-radius:0 0 3px 3px;background:var(--c)}
+.pj .lk{font-size:13px;font-weight:700;color:var(--c)}
+.pj.hide{display:none}
+/* experience */
+.tl{list-style:none;padding:0;margin:4px 0 0;display:grid;gap:13px}
+.tl li{display:grid;grid-template-columns:72px 1fr;gap:10px}
+.tl .y{font:500 12px "JetBrains Mono",monospace;color:var(--muted);padding-top:3px}
+.tl b{display:block}.tl span{color:var(--muted);font-size:14px}
+.tags2{display:flex;flex-wrap:wrap;gap:7px}
+.tags2 span{font-size:13px;font-weight:600;padding:6px 11px;border-radius:999px;background:var(--soft);border:1px solid var(--line);transition:opacity .2s}
+.tags2 span.ml{color:var(--c1)}.tags2 span.fe{color:var(--c2)}.tags2 span.in{color:var(--c3)}
+.lang{display:grid;gap:9px;margin-top:4px}
+.lang div{display:grid;grid-template-columns:76px 1fr 46px;gap:10px;align-items:center;font-size:14px}
+.lang i{height:8px;border-radius:999px;background:var(--line);position:relative;overflow:hidden}
+.lang i:after{content:"";position:absolute;inset:0;width:var(--w);background:linear-gradient(90deg,var(--c6),var(--c1));border-radius:999px}
+.lang small{color:var(--muted);font:500 12px "JetBrains Mono",monospace;text-align:right}
+.cta{background:var(--c2);color:#fff;border:0;flex-direction:row;align-items:center;gap:20px;flex-wrap:wrap}
+.cta h3{font-size:28px;line-height:1.1;margin:0 0 6px;letter-spacing:-.02em}
+.cta p{margin:0;opacity:.92}
+.cta .row{margin:0 0 0 auto;padding:0}
+.cta .pill{background:#fff;color:#17171c;border:0}
+.cta .pill.ghost{background:rgba(255,255,255,.18);color:#fff}
+footer{text-align:center;color:var(--muted);font-size:13px;margin-top:26px}
+.rv{opacity:0;transform:translateY(14px) scale(.985)}
+.rv.in{opacity:1;transform:none;transition:opacity .6s ease,transform .6s ease}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="#">pooja<span>.</span>prasad</a>
+    <nav class="nav"><a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="Pooja_Prasad_CV.pdf" target="_blank" rel="noopener">Résumé</a></nav>
+    <button class="tbtn" id="theme" aria-label="Toggle dark mode">◐</button>
+  </header>
+
+  <main class="grid">
+    <!-- hero row -->
+    <section class="c intro w2 rv">
+      <div class="lab">AI Engineer · Munich</div>
+      <h1>Hi, I'm Pooja. I build <span class="hl">transformer pipelines</span> and the apps around them.</h1>
+      <p>AI engineer with an M.Sc. in Computer Science and three years of shipping production software. I work across the whole loop: data, models, evaluation, deployment, and a UI people actually use.</p>
+      <div class="row">
+        <a class="pill dark" href="https://www.linkedin.com/in/poojaprasadrn" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="pill" href="https://github.com/poojaprasadrn" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="pill" href="#projects">Projects ↓</a>
+      </div>
+    </section>
+
+    <section class="c me rv">
+      <img class="ph" src="assets/photo.webp" alt="Portrait of Pooja Prasad" width="150" height="150">
+      <b>Pooja Prasad</b>
+      <div class="sub">Munich, Germany<br>M.Sc. CS · Bauhaus-Universität Weimar</div>
+      <span class="status"><i></i>Open to work</span>
+    </section>
+
+    <section class="c cv rv">
+      <div class="lab">Résumé</div>
+      <h3>My CV, in one click</h3>
+      <p>Two pages covering AI engineering, full-stack work, my thesis and RAG.</p>
+      <div class="doc"><span class="ic">PDF</span><div><b>Pooja_Prasad_CV.pdf</b><small>2 pages · updated Oct 2026</small></div></div>
+      <div class="row">
+        <a class="pill" href="Pooja_Prasad_CV.pdf" target="_blank" rel="noopener">View ↗</a>
+        <a class="pill ghost" href="Pooja_Prasad_CV.pdf" download>Download ↓</a>
+      </div>
+    </section>
+
+    <!-- summary + thesis -->
+    <section class="c summary w2 h2 rv" id="about">
+      <div class="lab">Professional summary</div>
+      <h2 class="sec">AI engineering with production habits</h2>
+      <p>I'm an <b>AI engineer</b> with an <b>M.Sc. in Computer Science</b> from Bauhaus-Universität Weimar (thesis grade 1.3) and <b>three years of software engineering</b>, including internships, at Mindtree, Robert Bosch, Juniper Networks and Bosch Limited.</p>
+      <p>For my thesis in the Webis research group, I built and evaluated <b>LLM and transformer-based NLP systems</b>:</p>
+      <ul style="margin:0 0 12px;padding-left:20px;color:var(--muted)">
+        <li>a custom annotation platform with <b style="color:var(--fg)">GPT-5-assisted labelling</b></li>
+        <li>a fine-tuned <b style="color:var(--fg)">hybrid DistilBERT</b> spam classifier (PyTorch, Hugging Face)</li>
+        <li>an AI-text detector with <b style="color:var(--fg)">99.5% accuracy</b>, applied to 8M+ pages</li>
+        <li>batch inference on an HPC cluster with <b style="color:var(--fg)">Docker and SLURM</b></li>
+      </ul>
+      <p>Before that, I built REST APIs, backend services and frontends in <b>React, Angular and Node.js</b>, worked directly with clients, and mentored juniors in Agile teams. I work comfortably in English (C2) and German (B1).</p>
+      <div class="hl3">
+        <div><b>🧠 End-to-end ML</b><span>Data, annotation, model, evaluation, deployment</span></div>
+        <div><b>💻 Full-stack delivery</b><span>React, Angular, Node.js, Spring Boot</span></div>
+        <div><b>🤝 Team and clients</b><span>Knowledge transfer, mentoring, Scrum</span></div>
+      </div>
+    </section>
+
+    <a class="c thesis w2 h2 rv" href="https://poojaprasadrn.github.io/msc-thesis-transformers/" target="_blank" rel="noopener">
+      <span class="go">↗</span>
+      <div class="lab">Featured · M.Sc. thesis</div>
+      <h3>Transformers vs. web spam: detecting fake reviews and AI text across 8M search results</h3>
+      <p>A hybrid DistilBERT model fuses contextual embeddings with about 2,000 linguistic features in a two-stage cascade. I deployed it with SLURM and Singularity on 4 HPC nodes, backed by a 9-annotator ground-truth study. The interactive project page includes live demos.</p>
+      <div class="stats">
+        <div><b>8.07M</b><span>pages classified</span></div>
+        <div><b>360k+</b><span>through the transformer</span></div>
+        <div><b>99.5%</b><span>AI-text test accuracy</span></div>
+      </div>
+    </a>
+
+    <!-- rag + metrics -->
+    <a class="c rag w2 rv" href="https://poojaprasadrn.github.io/msc-thesis-transformers/#ask" target="_blank" rel="noopener">
+      <span class="go">↗</span>
+      <div class="lab">Featured · RAG</div>
+      <h3>Ask my thesis</h3>
+      <p>Retrieval-augmented QA orchestrated with LangGraph, with page-cited answers and a retry-or-clarify route. It runs live in the browser.</p>
+      <div class="flow" id="flow"><span>rewrite</span><span>retrieve</span><span>grade</span><span>generate</span></div>
+    </a>
+    <section class="c metric rv"><div class="big">~90%</div><p>faster page loads after I reworked RxJS state on Bosch's Origify dashboard</p></section>
+    <section class="c metric b rv"><div class="big">+52%</div><p>unit-test coverage at Mindtree with TDD, Jest and Jenkins, and 47% faster loads</p></section>
+
+    <!-- projects -->
+    <section class="c w4 rv" id="projects">
+      <div class="ptop">
+        <div><div class="lab">Projects</div><h2 class="sec">Things I've built</h2></div>
+        <div class="filt" id="pfilt"><button data-f="all" class="on">All</button><button data-f="ai">AI &amp; ML</button><button data-f="web">Web &amp; apps</button><button data-f="sys">Systems</button></div>
+      </div>
+      <div class="plist" id="plist">
+        <a class="pj" data-k="ai" style="--c:var(--c1)" href="https://poojaprasadrn.github.io/msc-thesis-transformers/" target="_blank" rel="noopener">
+          <div class="t"><h4>Hybrid DistilBERT spam classifier</h4><span class="yr">2025</span></div>
+          <p>A two-stage review → spam cascade that fuses [CLS] embeddings with about 2,000 linguistic features. Benchmarked against BERT and RoBERTa across 8 configurations.</p>
+          <div class="tags"><span>PyTorch</span><span>Hugging Face</span><span>NLP</span></div><span class="lk">Thesis page ↗</span></a>
+        <a class="pj" data-k="ai" style="--c:var(--c4)" href="https://poojaprasadrn.github.io/msc-thesis-transformers/#ask" target="_blank" rel="noopener">
+          <div class="t"><h4>Ask my thesis: RAG with LangGraph</h4><span class="yr">2026</span></div>
+          <p>Question answering over my thesis: query rewriting, TF-IDF retrieval, relevance grading, a retry/clarify fallback, and LLM answers with page citations.</p>
+          <div class="tags"><span>LangGraph</span><span>RAG</span><span>Python</span></div><span class="lk">Live demo ↗</span></a>
+        <a class="pj" data-k="ai" style="--c:var(--c6)" href="https://poojaprasadrn.github.io/msc-thesis-transformers/#ai" target="_blank" rel="noopener">
+          <div class="t"><h4>AI-text detector at web scale</h4><span class="yr">2025</span></div>
+          <p>A TF-IDF + linear SVM detector at 99.5% accuracy on PAN 2024, applied to 8M+ search results at about 6 ms per page on CPU.</p>
+          <div class="tags"><span>scikit-learn</span><span>SVM</span><span>Big data</span></div><span class="lk">Results ↗</span></a>
+        <a class="pj" data-k="ai web" style="--c:var(--c3)" href="https://poojaprasadrn.github.io/msc-thesis-transformers/#data" target="_blank" rel="noopener">
+          <div class="t"><h4>Annotation platform and study</h4><span class="yr">2025</span></div>
+          <p>A custom web tool and a 9-annotator study on 300 pages (Krippendorff's α = 0.84), cross-checked with GPT-5-assisted labels.</p>
+          <div class="tags"><span>Web app</span><span>Annotation</span><span>LLM</span></div><span class="lk">See the taxonomy ↗</span></a>
+        <a class="pj" data-k="sys ai" style="--c:var(--c2)" href="https://poojaprasadrn.github.io/msc-thesis-transformers/#scale" target="_blank" rel="noopener">
+          <div class="t"><h4>Distributed batch inference</h4><span class="yr">2025</span></div>
+          <p>Containerised, sharded and resumable SLURM jobs across 4 HPC nodes. About 70% less processing time than sequential runs.</p>
+          <div class="tags"><span>SLURM</span><span>Docker</span><span>Singularity</span></div><span class="lk">How it scaled ↗</span></a>
+        <div class="pj" data-k="web" style="--c:var(--c2)">
+          <div class="t"><h4>Origify sales dashboard · Bosch</h4><span class="yr">2023–24</span></div>
+          <p>A technical-sales dashboard and a migration of legacy dashboards to a new Angular framework, with Jasmine and Karma tests. About 90% faster page loads.</p>
+          <div class="tags"><span>Angular</span><span>TypeScript</span><span>RxJS</span></div></div>
+        <div class="pj" data-k="web" style="--c:var(--c5)">
+          <div class="t"><h4>Client web app · Mindtree</h4><span class="yr">2020–22</span></div>
+          <p>Responsive core modules in React, Next.js, Redux and Tailwind on GCP, supported through production go-live. 47% faster loads and 21% less review time.</p>
+          <div class="tags"><span>React</span><span>Next.js</span><span>Redux</span></div></div>
+        <div class="pj" data-k="sys" style="--c:var(--c6)">
+          <div class="t"><h4>JUNOS memory-footprint analyser · Juniper</h4><span class="yr">2019</span></div>
+          <p>A Python tool that models the memory cost per route on MX/PTX routers from time-series data, with Healthbot and InfluxDB telemetry for anomaly monitoring.</p>
+          <div class="tags"><span>Python</span><span>PyEZ</span><span>Matplotlib</span></div></div>
+        <div class="pj" data-k="web sys" style="--c:var(--c3)">
+          <div class="t"><h4>Campus bike-share · Bosch Limited</h4><span class="yr">2019–20</span></div>
+          <p>Bachelor's thesis: an Android app for bicycle rental and docking, a Spring Boot microservices backend, and Raspberry Pi OTP unlocking.</p>
+          <div class="tags"><span>Android</span><span>Spring Boot</span><span>Raspberry Pi</span></div></div>
+      </div>
+    </section>
+
+    <!-- experience + skills -->
+    <section class="c w2 h2 rv" id="experience">
+      <div class="lab">Experience</div>
+      <ul class="tl">
+        <li><span class="y">2025</span><div><b>M.Sc. thesis · Webis research group</b><span>Bauhaus-Universität Weimar · transformer spam detection and AI-text trends at web scale</span></div></li>
+        <li><span class="y">10/23–04/24</span><div><b>Web Developer Intern (Angular) · Robert Bosch GmbH</b><span>Stuttgart · Origify dashboards, Angular migration, RxJS performance</span></div></li>
+        <li><span class="y">12/20–09/22</span><div><b>Full-Stack Web Developer (MERN) · Mindtree</b><span>India · React/Next.js modules, TDD and CI/CD, client work, mentoring</span></div></li>
+        <li><span class="y">08/19–03/20</span><div><b>Android Developer Intern · Bosch Limited</b><span>India · campus bike-share app, Spring Boot backend, Raspberry Pi OTP</span></div></li>
+        <li><span class="y">07/19–08/19</span><div><b>Software Engineering Intern · Juniper Networks</b><span>Router memory-footprint tool, telemetry, iPerf benchmarks</span></div></li>
+        <li><span class="y">07/18–08/18</span><div><b>Full-Stack Developer Intern · Zool Tech Solutions</b><span>India · PHP/MySQL movie-booking app</span></div></li>
+      </ul>
+      <div class="lab" style="margin-top:20px">Education</div>
+      <ul class="tl">
+        <li><span class="y">2022–26</span><div><b>M.Sc. Computer Science for Digital Media</b><span>Bauhaus-Universität Weimar · 1.8 (thesis 1.3)</span></div></li>
+        <li><span class="y">2016–20</span><div><b>B.E. Computer Science and Engineering</b><span>Global Academy of Technology, Bengaluru · Distinction</span></div></li>
+      </ul>
+    </section>
+
+    <section class="c w2 rv">
+      <div class="lab">Stack</div>
+      <div class="filt" id="sfilt" style="margin-bottom:12px"><button data-f="all" class="on">All</button><button data-f="ml">ML &amp; data</button><button data-f="fe">Web</button><button data-f="in">Infra</button></div>
+      <div class="tags2" id="tags">
+        <span class="ml">Python</span><span class="ml">PyTorch</span><span class="ml">Hugging Face</span><span class="ml">Transformers</span><span class="ml">scikit-learn</span><span class="ml">LLMs</span><span class="ml">RAG</span><span class="ml">LangGraph</span><span class="ml">Pandas</span><span class="ml">NumPy</span>
+        <span class="fe">TypeScript</span><span class="fe">React</span><span class="fe">Next.js</span><span class="fe">Angular</span><span class="fe">RxJS</span><span class="fe">Redux</span><span class="fe">Node.js</span><span class="fe">Express</span><span class="fe">Spring Boot</span><span class="fe">Java</span>
+        <span class="in">Docker</span><span class="in">SLURM</span><span class="in">GCP</span><span class="in">Git</span><span class="in">Jenkins CI/CD</span><span class="in">Jest</span><span class="in">MySQL</span><span class="in">MongoDB</span>
+      </div>
+    </section>
+
+    <section class="c w2 rv">
+      <div class="lab">Languages</div>
+      <div class="lang">
+        <div>English<i style="--w:100%"></i><small>C2</small></div>
+        <div>German<i style="--w:50%"></i><small>B1</small></div>
+        <div>Kannada<i style="--w:100%"></i><small>native</small></div>
+        <div>Hindi<i style="--w:80%"></i><small>prof.</small></div>
+      </div>
+    </section>
+
+    <section class="c cta w4 rv">
+      <div><h3>Hiring an AI or ML engineer?</h3><p>I'm open to Machine Learning, NLP and AI engineering roles in Munich or remote across Germany, and can start immediately.</p></div>
+      <div class="row">
+        <a class="pill" href="https://www.linkedin.com/in/poojaprasadrn" target="_blank" rel="noopener">Let's talk on LinkedIn ↗</a>
+        <a class="pill ghost" href="Pooja_Prasad_CV.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
+      </div>
+    </section>
+  </main>
+  <footer>© 2026 Pooja Prasad · Built by hand, no frameworks</footer>
+</div>
+<script>
+(function(){
+var root=document.documentElement;
+try{var s=localStorage.getItem('theme');if(s)root.dataset.theme=s;else if(matchMedia('(prefers-color-scheme: dark)').matches)root.dataset.theme='dark'}catch(e){}
+document.getElementById('theme').addEventListener('click',function(){root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('theme',root.dataset.theme)}catch(e){}});
+var steps=document.querySelectorAll('#flow span'),i=0;setInterval(function(){steps.forEach(function(s,j){s.classList.toggle('on',j===i)});i=(i+1)%steps.length},900);
+function filter(bar,items,test){bar.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;bar.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b)});items.forEach(function(t){test(t,b.dataset.f)})})}
+filter(document.getElementById('pfilt'),document.querySelectorAll('#plist .pj'),function(t,f){t.classList.toggle('hide',f!=='all'&&t.dataset.k.split(' ').indexOf(f)<0)});
+filter(document.getElementById('sfilt'),document.querySelectorAll('#tags span'),function(t,f){t.style.opacity=(f==='all'||t.classList.contains(f))?1:.2});
+var io=new IntersectionObserver(function(es){es.forEach(function(e,k){if(e.isIntersecting){setTimeout(function(){e.target.classList.add('in')},k*60);io.unobserve(e.target)}})},{threshold:.08});
+document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
